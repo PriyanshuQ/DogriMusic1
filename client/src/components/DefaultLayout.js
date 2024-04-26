@@ -1,6 +1,6 @@
 import React, { Children, useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 function DefaultLayout({ children }) {
   const { user } = useSelector((state) => state.user);
@@ -15,7 +15,7 @@ function DefaultLayout({ children }) {
 
   const navigate = useNavigate();
   return (
-    <div className="main" >
+    <div className="main">
       <div className="bg-gray-700 header flex justify-between shadow p-5 items-center">
         <h1
           className="text-3xl ml-7 font-bold cursor-pointer"
@@ -43,12 +43,6 @@ function DefaultLayout({ children }) {
 
         </div>     */}
 
-        
-
-      
-
-
-
         <div className="flex items-center gap-2">
           {user.isAdmin &&
           !(window.location.href === "http://localhost:3000/admin") ? (
@@ -58,19 +52,25 @@ function DefaultLayout({ children }) {
                 navigate("/admin");
               }}
             >
-              Add Song 
-                 
+              Add Song
             </button>
           ) : null}
-{/* 
+          {/* 
               <div className="container">
               
               </div> */}
-              {/* <i className="ri-sun-fill text-4xl" style={myStyle}>
+          {/* <i className="ri-sun-fill text-4xl" style={myStyle}>
             
               </i> */}
 
-
+          <a
+            className="text-white bg-green-600 py-2 px-5"
+            href="https://musicrecommendationsystem-v43slrbqwixy26jtohfdnv.streamlit.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Recommended Songs
+          </a>
 
           <h1 className="text-xl">{user?.name.toUpperCase()}</h1>
           <i
