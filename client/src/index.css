@@ -9,6 +9,11 @@
     /* background-color: black; */
 }
 
+.card-spacing {
+    margin-right: 50px; /* Adjust as needed */
+}
+
+
 input {
     height: 40px;
     border: 2px solid rgb(128, 128, 128, 0.716);

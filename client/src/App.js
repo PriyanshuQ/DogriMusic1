@@ -9,6 +9,7 @@ import Spinner from "./components/Spinner";
 import CreateEditPlaylist from "./pages/CreateEditPlaylist";
 import AdminHome from "./pages/Admin/AdminHome";
 import AddEditSong from "./pages/Admin/AddEditSong";
+import Subscribe from "./pages/Subscribe";
 
 // import {Toaster} from '/react-hot-toast';
 
@@ -67,6 +68,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <AdminHome/>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/subscribe"
+            element={
+              <ProtectedRoute>
+                <Subscribe/>
               </ProtectedRoute>
             }
           />

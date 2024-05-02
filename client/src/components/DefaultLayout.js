@@ -62,6 +62,17 @@ function DefaultLayout({ children }) {
           {/* <i className="ri-sun-fill text-4xl" style={myStyle}>
             
               </i> */}
+          {!user.isAdmin &&
+          !(window.location.href === "http://localhost:3000/subscribe") ? (
+            <button
+              className="text-white bg-orange-500 py-2 px-5"
+              onClick={() => {
+                navigate("/subscribe");
+              }}
+            >
+              Subscribe for more
+            </button>
+          ) : null}
 
           <a
             className="text-white bg-green-600 py-2 px-5"
